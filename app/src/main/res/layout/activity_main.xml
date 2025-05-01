@@ -44,7 +44,8 @@
         android:id="@+id/weatherDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/sample_description"
+        android:text="@string/sunny_condition"
         android:textSize="18sp"
         android:textColor="@color/gray" />
 </LinearLayout>
+
