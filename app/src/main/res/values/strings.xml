@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">MyWeatherApp</string>
+    <!-- App Name for MyWeatherApp1 -->
+    <string name="app_name">MyWeatherApp1</string>
+
+    <!-- Sample temperature and weather description -->
+    <string name="sample_temperature">72°F</string>
+    <string name="sample_description">Sunny</string>
+
+    <!-- Weather Condition Text -->
+    <string name="sunny_condition">Sunny</string>
 </resources>
