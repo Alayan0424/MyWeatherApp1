@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
-    kotlin("plugin.serialization") version "1.9.0"
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.plugin.serialization")
+
 }
 
 android {
@@ -25,6 +25,11 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            composeOptions {
+                kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
+            }
+
         }
     }
 
@@ -71,11 +76,21 @@ dependencies {
 
     // Image Loading
     implementation(libs.coil.compose)
+    implementation(libs.androidx.navigation.runtime.android)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.runtime.desktop)
+    implementation(libs.androidx.navigation.compose)
     // Testing
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.ui.tooling.preview)
     debugImplementation(libs.androidx.ui.tooling)
+
+    implementation(libs.kotlinx.serialization.json.v173)
+
+    implementation(libs.androidx.compose.compiler)
+
+
 
 }

@@ -13,15 +13,30 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.myweatherapp.ui.theme.MyWeatherAppTheme
 import com.example.weatherapp.viewmodel.WeatherViewModel
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyWeatherAppTheme {
-                WeatherScreen()
+                val navController = rememberNavController()
+                NavHost(navController = navController, startDestination = "weather") {
+                    composable("weather") {
+                        WeatherScreen( )
+                    }
+                    composable("forecast/{zipCode}") { backStackEntry ->
+                        val zipCode = backStackEntry.arguments?.getString("zipCode") ?: ""
+                        ForecastScreen(zipCode = zipCode)
+                    }
+                }
             }
         }
+
     }
 }
 

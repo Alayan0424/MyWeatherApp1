@@ -26,6 +26,23 @@
         <string name="weather_label">Weather: %1$s</string>
 
 
+    <!-- Input field -->
+    <string name="enter_zip">Enter Zip Code</string>
+
+    <!-- Buttons -->
+    <string name="see_forecast">See 16-day Forecast</string>
+
+    <!-- Forecast screen -->
+    <string name="forecast_title">16-Day Forecast</string>
+    <string name="forecast_for">Forecast for Zip Code: %1$s</string>
+
+    <!-- Icons / loading -->
+    <string name="loading_forecast">Loading forecast...</string>
+
+    <!-- Error feedback -->
+    <string name="invalid_zip">Invalid zip code. Please try again.</string>
+
+
     <!-- Error or placeholder messages -->
     <string name="error_fetching_data">Error fetching weather data. Please try again.</string>
     <string name="no_data_available">No weather data available for this location.</string>
