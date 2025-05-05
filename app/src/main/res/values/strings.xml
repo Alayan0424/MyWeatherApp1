@@ -2,10 +2,32 @@
     <!-- App Name for MyWeatherApp1 -->
     <string name="app_name">MyWeatherApp1</string>
 
-    <!-- Sample temperature and weather description -->
-    <string name="sample_temperature">72°F</string>
-    <string name="sample_description">Sunny</string>
+    <!-- Dynamic strings for displaying weather data -->
+    <string name="city_name">City: %1$s</string> <!-- %1$s will be replaced by the city name -->
+    <string name="temperature">Temperature: %1$.2f°C</string> <!-- %1$.2f will be replaced by the temperature (Celsius) -->
+    <string name="weather_condition">Condition: %1$s</string> <!-- %1$s will be replaced by the weather condition (e.g., Sunny) -->
+    <string name="humidity">Humidity: %1$d%%</string> <!-- %1$d will be replaced by humidity percentage -->
+    <string name="wind_speed">Wind Speed: %1$.2f m/s</string> <!-- %1$.2f will be replaced by wind speed (m/s) -->
 
-    <!-- Weather Condition Text -->
+    <!-- Sample temperature and weather description (for testing or fallback data) -->
+    <string name="sample_temperature">72°F</string> <!-- Static fallback for temperature -->
+    <string name="sample_description">Sunny</string> <!-- Static fallback for description -->
+
+    <!-- Weather Condition Text (used for specific conditions) -->
     <string name="sunny_condition">Sunny</string>
+    <string name="cloudy_condition">Cloudy</string>
+    <string name="rainy_condition">Rainy</string>
+    <string name="snowy_condition">Snowy</string>
+    <string name="storm_condition">Storm</string>
+
+        <string name="get_weather_button">Get Weather</string>
+        <string name="temperature_label">Temperature: %1$s°C</string>
+        <string name="humidity_label">Humidity: %1$s%%</string>
+        <string name="weather_label">Weather: %1$s</string>
+
+
+    <!-- Error or placeholder messages -->
+    <string name="error_fetching_data">Error fetching weather data. Please try again.</string>
+    <string name="no_data_available">No weather data available for this location.</string>
+    <string name="location_not_found">Location not found. Please check your input.</string>
 </resources>
