@@ -9,16 +9,20 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
-    }
-}
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
+        maven { url = uri("https://jitpack.io") } // Optional, for other GitHub-hosted libs
+        maven { url = uri("https://oss.sonatype.org/content/repositories/snapshots") }
     }
 }
 
-rootProject.name = "MyWeatherApp"
-include(":app")
- 
+dependencyResolutionManagement{
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories{
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+
+    }
+}
+
+rootProject.name = "MyWeatherApp"  // Update your root project name as needed
+include(":app")  // Include the app module (you can add more modules here as required)
