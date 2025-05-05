@@ -1,10 +1,13 @@
 [versions]
+composeCompiler = "1.5.13"
 agp = "8.8.0"
 kotlin = "2.0.0"
 composeBom = "2024.04.01"
 activityCompose = "1.10.0"
 activity = "1.8.0"
 coreKtx = "1.10.1"
+kotlinxSerializationJson = "1.7.3"
+kotlinxSerializationJsonVersion = "1.6.3"
 lifecycleRuntimeKtx = "2.6.2"
 lifecycleViewmodelKtx = "2.6.2"
 lifecycleLivedataKtx = "2.6.2"
@@ -17,12 +20,14 @@ coil = "2.2.2"
 junit = "4.13.2"
 androidxJunit = "1.1.5"
 espresso = "3.5.1"
-
+navigationRuntimeAndroid = "2.9.0-rc01"
+navigationRuntimeKtx = "2.8.9"
+navigationRuntimeDesktop = "2.9.0-beta01"
+navigationCompose = "2.8.9"
 
 [libraries]
-
+androidx-compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version = "2.6.2" }
-
 androidx-activity = { module = "androidx.activity:activity", version.ref = "activity" }
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
@@ -39,6 +44,9 @@ androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-view
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
+kotlinx-serialization-json-v163 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJsonVersion" }
+kotlinx-serialization-json-v173 = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
 retrofit2-kotlin-coroutines-adapter = { module = "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter", version.ref = "coroutinesAdapter" }
@@ -48,6 +56,11 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 junit = { module = "junit:junit", version.ref = "junit" }
 androidx-junit = { module = "androidx.test.ext:junit", version.ref = "androidxJunit" }
 androidx-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espresso" }
+
+androidx-navigation-runtime-android = { group = "androidx.navigation", name = "navigation-runtime-android", version.ref = "navigationRuntimeAndroid" }
+androidx-navigation-runtime-ktx = { group = "androidx.navigation", name = "navigation-runtime-ktx", version.ref = "navigationRuntimeKtx" }
+androidx-navigation-runtime-desktop = { group = "androidx.navigation", name = "navigation-runtime-desktop", version.ref = "navigationRuntimeDesktop" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
